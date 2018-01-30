@@ -1,0 +1,4 @@
+Back button:
+It will restart the counter on the start and resume because it'll exit the application 
+Home button:
+The onStart and onResume will increase the counter by 1 cause the application is not exiting

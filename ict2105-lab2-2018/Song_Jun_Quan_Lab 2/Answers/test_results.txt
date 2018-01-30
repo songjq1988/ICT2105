@@ -1,0 +1,62 @@
+Test 1:
+
+onCreate() calls: 1
+onStart() calls: 1
+onResume() calls: 1
+onRestart() calls: 0
+
+The reason why onRestart doesn't increase because it's not restarted.
+
+Test 2:
+
+onCreate() calls: 1
+onStart() calls: 2
+onResume() calls: 2
+onRestart() calls: 1
+
+For this test, onCreate doesn't increase because it's not created butinstead, it's being restarted which means onStart, onResume and onRestart will be activiated.
+
+Test 3:
+
+onCreate() calls: 3
+onStart() calls: 3
+onResume() calls: 3
+onRestart() calls: 0
+
+For this test, onCreate, onStart and onResume will be activiated because when being rotated, it's being created in another screen layout thus calls these functions.
+
+Test 4:
+
+onCreate() calls: 1
+onStart() calls: 1
+onResume() calls: 1
+onRestart() calls: 0
+
+For this test, onCreate, onStart and onResume will be activiated because the new activity is being started.
+
+Test 5:
+
+onCreate() calls: 3
+onStart() calls: 3
+onResume() calls: 3
+onRestart() calls: 0
+
+This test is the same as test case 1 just that this is in a new activity
+
+Test 6:
+
+onCreate() calls: 1
+onStart() calls: 2
+onResume() calls: 2
+onRestart() calls: 1
+
+For this test case, All will be activiated due to the reason that activity 2 is being closed and will return to activity 1 which leads to the restart of the activity thus everything is activiated for this case.
+
+Test 7:
+
+onCreate() calls: 1
+onStart() calls: 1
+onResume() calls: 1
+onRestart() calls: 0
+
+The reason for the result is because the new activity is being started.
